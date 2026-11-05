@@ -1,0 +1,1893 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>شركة توبلاير للمقاولات | TOPLAYER Contracting</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <style>
+        :root {
+            --primary-navy: #0B192C;
+            --dark-slate: #1E293B;
+            --gold-primary: #D4AF37;
+            --gold-light: #FFD700;
+            --bg-light: #F8FAFC;
+            --white: #FFFFFF;
+            --text-dark: #0F172A;
+            --text-muted: #64748B;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: 'Cairo', 'Montserrat', sans-serif;
+        }
+
+        body {
+            background-color: var(--white);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* Header & Nav */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: rgba(11, 25, 44, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 10px 0;
+            border-bottom: 2px solid var(--gold-primary);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: var(--gold-primary);
+            line-height: 1.1;
+        }
+
+        .logo-sub {
+            font-size: 0.7rem;
+            color: var(--white);
+            display: block;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 0.95rem;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--gold-primary);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, var(--gold-primary), var(--gold-light));
+            color: var(--primary-navy);
+            padding: 10px 22px;
+            border: none;
+            border-radius: 5px;
+            font-weight: 700;
+            cursor: pointer;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-lang {
+            background: transparent;
+            border: 1px solid var(--gold-primary);
+            color: var(--gold-primary);
+            padding: 8px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+
+        /* Hero Section المعدل */
+        .hero {
+            position: relative;
+            height: 85vh;
+            background-image: url('https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=1600');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(11, 25, 44, 0.75); /* طبقة تظليل كحلي شفاف لوضوح النص */
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 2.8rem;
+            color: var(--gold-primary);
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            text-shadow: 0 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .btn-outline {
+            border: 2px solid var(--white);
+            color: var(--white);
+            padding: 10px 22px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .btn-outline:hover {
+            background: var(--white);
+            color: var(--primary-navy);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.2rem;
+            color: var(--primary-navy);
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            width: 60px;
+            height: 3px;
+            background: var(--gold-primary);
+            display: block;
+            margin: 10px auto 0;
+        }
+
+        /* Cards & Grids */
+        .about-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .about-banner {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 12px;
+            margin-bottom: 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .glass-card, .cred-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+        }
+
+        .card-icon, .cred-card i {
+            font-size: 2.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+        }
+
+        /* Services Cards with Images */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid #E2E8F0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            transition: 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--gold-primary);
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.2);
+        }
+
+        .service-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 25px;
+            text-align: center;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .service-body i {
+            font-size: 2rem;
+            color: var(--gold-primary);
+            margin-bottom: 10px;
+        }
+
+        .service-body h3 {
+            font-size: 1.25rem;
+            color: var(--primary-navy);
+        }
+
+        /* Values Grid */
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 15px;
+        }
+
+        .value-item {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .value-item i {
+            color: var(--gold-primary);
+            font-size: 1.4rem;
+        }
+
+        /* Partners Logos */
+        .partners-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 20px;
+            align-items: center;
+        }
+
+        .partner-card {
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #E2E8F0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            transition: 0.3s;
+        }
+
+        .partner-card:hover {
+            border-color: var(--gold-primary);
+            transform: scale(1.03);
+        }
+
+        .partner-card img {
+            max-width: 80%;
+            max-height: 60px;
+            object-fit: contain;
+            filter: grayscale(30%);
+            transition: 0.3s;
+        }
+
+        .partner-card:hover img {
+            filter: grayscale(0%);
+        }
+
+        /* Quality Section */
+        .quality-box {
+            background: var(--primary-navy);
+            color: var(--white);
+            padding: 40px;
+            border-radius: 12px;
+            text-align: center;
+            border: 2px solid var(--gold-primary);
+        }
+
+        .quality-icon {
+            font-size: 3.5rem;
+            color: var(--gold-primary);
+            margin-bottom: 15px;
+        }
+
+       
+/* TOPLAYER Certificates */
+.tl-cert-intro {
+    text-align: center;
+    max-width: 800px;
+    margin: -20px auto 35px;
+    color: var(--text-muted);
+    line-height: 1.9;
+}
+
+.tl-cert-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    align-items: stretch;
+}
+
+.tl-cert-card {
+    background: var(--white);
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 8px 24px rgba(11, 25, 44, 0.08);
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.tl-cert-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 32px rgba(11, 25, 44, 0.14);
+}
+
+.tl-cert-preview {
+    height: 310px;
+    background: #f1f5f9;
+    overflow: hidden;
+    border-bottom: 3px solid var(--gold-primary);
+}
+
+.tl-cert-preview iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    background: #fff;
+}
+
+.tl-cert-card .tl-card-body {
+    padding: 24px;
+}
+
+.tl-cert-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--gold-primary);
+    font-weight: 700;
+    margin-bottom: 12px;
+}
+
+.tl-cert-card h3 {
+    color: var(--primary-navy);
+    font-size: 19px;
+    line-height: 1.8;
+    margin: 0 0 12px;
+}
+
+.tl-cert-card p {
+    line-height: 1.9;
+    color: var(--text-muted);
+}
+
+.tl-cert-dates {
+    background: #f8fafc;
+    border-inline-start: 3px solid var(--gold-primary);
+    padding: 12px 16px;
+    margin: 18px 0;
+    border-radius: 6px;
+}
+
+.tl-cert-dates p {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 8px;
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.tl-cert-dates strong {
+    color: var(--primary-navy);
+}
+
+.tl-cert-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    padding: 13px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+}
+
+@media (max-width: 768px) {
+    .tl-cert-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tl-cert-preview {
+        height: 280px;
+    }
+}
+
+
+        /* Location / Google Maps */
+        .location-grid{display:grid;grid-template-columns:1fr 1.15fr;gap:28px;align-items:stretch}
+        .location-info{background:var(--primary-navy);color:var(--white);padding:30px;border:1px solid var(--gold-primary);border-radius:12px;display:flex;flex-direction:column;justify-content:center;gap:14px}
+        .location-info h3{color:var(--gold-primary);margin:0 0 4px}
+        .location-info p{line-height:1.9;margin:0}
+        .location-info i{color:var(--gold-primary);margin-inline-end:8px}
+        .location-map{min-height:340px;border:2px solid var(--gold-primary);border-radius:12px;overflow:hidden;box-shadow:0 10px 28px rgba(11,25,44,.12)}
+        .location-map iframe{display:block;width:100%;height:100%;min-height:340px;border:0}
+        .location-directions{display:inline-flex;align-items:center;justify-content:center;gap:9px;align-self:flex-start;background:var(--gold-primary);color:var(--primary-navy);padding:12px 20px;border-radius:5px;text-decoration:none;font-weight:700;margin-top:6px}
+        .location-directions:hover{background:var(--gold-light)}
+
+        /* Contact */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            padding: 12px;
+            border: 1px solid #CBD5E1;
+            border-radius: 5px;
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 25px;
+            left: 25px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+        }
+
+        footer {
+            background: var(--primary-navy);
+            color: var(--white);
+            text-align: center;
+            padding: 20px 0;
+            border-top: 1px solid var(--gold-primary);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid { grid-template-columns: 1fr; }
+            .location-grid { grid-template-columns: 1fr; }
+            .location-map, .location-map iframe { min-height: 300px; }
+            .nav-links { display: none; }
+            .hero h1 { font-size: 2rem; }
+        }
+        /* Hero background image */
+#hero {
+background:
+linear-gradient(
+rgba(7, 19, 31, 0.72),
+rgba(7, 19, 31, 0.72)
+),
+url("assets/about.jpg")center/cover no-repeat;
+position: relative;
+color: #fff;
+}
+
+
+        /* Projects, media gallery and certificates */
+        .tl-projects-grid,.tl-media-grid,.tl-cert-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:22px}
+        .tl-project-card,.tl-media-card,.tl-cert-card{background:var(--white);border:1px solid #E2E8F0;border-radius:14px;overflow:hidden;box-shadow:0 8px 24px rgba(11,25,44,.08);transition:transform .25s,box-shadow .25s}
+        .tl-project-card:hover,.tl-media-card:hover,.tl-cert-card:hover{transform:translateY(-5px);box-shadow:0 14px 32px rgba(11,25,44,.13)}
+        .tl-project-card img,.tl-media-thumb{width:100%;height:210px;object-fit:cover;display:block}
+        .tl-project-card .tl-card-body,.tl-media-card .tl-card-body,.tl-cert-card .tl-card-body{padding:18px}
+        .tl-card-body h3{color:var(--primary-navy);margin-bottom:7px}
+        .tl-card-body p{color:var(--text-muted)}
+        .tl-media-filters{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin:-12px 0 28px}
+        .tl-filter-btn{border:1px solid var(--gold-primary);background:#fff;color:var(--primary-navy);padding:9px 20px;border-radius:30px;cursor:pointer;font-weight:700;transition:.2s}
+        .tl-filter-btn.active,.tl-filter-btn:hover{background:var(--primary-navy);color:var(--gold-light);border-color:var(--primary-navy)}
+        .tl-media-card{cursor:pointer;position:relative}
+        .tl-media-card .tl-media-icon{position:absolute;top:12px;inset-inline-start:12px;background:rgba(11,25,44,.88);color:var(--gold-light);width:42px;height:42px;border-radius:50%;display:grid;place-items:center}
+        .tl-media-card[hidden]{display:none!important}
+        .tl-media-open{border:0;background:transparent;padding:0;width:100%;text-align:inherit;cursor:pointer;display:block}
+        .tl-cert-preview{height:230px;background:#f1f5f9;display:grid;place-items:center;overflow:hidden}
+        .tl-cert-preview img{width:100%;height:100%;object-fit:contain;padding:10px}
+        .tl-cert-placeholder{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;color:var(--primary-navy);font-weight:700;text-align:center;padding:20px}
+        .tl-cert-placeholder i{font-size:3.5rem;color:var(--gold-primary)}
+        .tl-cert-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:15px}
+        .tl-cert-actions a{display:inline-flex;align-items:center;gap:8px;justify-content:center;flex:1;min-width:125px;text-align:center}
+        .tl-btn-secondary{background:var(--primary-navy);color:#fff;border-radius:5px;padding:10px 14px;text-decoration:none;font-weight:700}
+        .tl-lightbox{position:fixed;inset:0;z-index:2000;background:rgba(3,10,20,.93);display:none;align-items:center;justify-content:center;padding:24px}
+        .tl-lightbox.open{display:flex}
+        .tl-lightbox-inner{width:min(1100px,100%);max-height:90vh;display:flex;align-items:center;justify-content:center;position:relative}
+        .tl-lightbox-inner img,.tl-lightbox-inner video{max-width:100%;max-height:84vh;object-fit:contain;border-radius:8px}
+        #topMediaLightboxContent{display:flex;align-items:center;justify-content:center;width:100%;max-height:84vh;min-width:0}
+        #topMediaLightboxContent img,#topMediaLightboxContent video{display:block;width:auto;height:auto;max-width:100%;max-height:84vh}
+        .tl-lightbox-inner{padding:12px 0 38px}
+        .tl-lightbox-caption{pointer-events:none}
+        body{overflow-x:hidden}
+        @media(max-width:768px){.nav-container{flex-wrap:wrap;gap:10px}.nav-actions{margin-inline-start:auto}.logo-text{font-size:1.3rem}.section{padding:55px 0}.section-title{font-size:1.8rem}.services-grid{grid-template-columns:1fr}.about-grid{grid-template-columns:1fr}.tl-cert-grid{grid-template-columns:1fr}}
+        .tl-lightbox-close{position:absolute;top:-44px;inset-inline-end:0;background:var(--gold-primary);border:0;color:var(--primary-navy);font-size:25px;width:40px;height:40px;border-radius:50%;cursor:pointer}
+        .tl-lightbox-caption{position:absolute;bottom:-32px;left:0;right:0;color:#fff;text-align:center}
+        @media(max-width:768px){.tl-projects-grid,.tl-media-grid,.tl-cert-grid{grid-template-columns:1fr}.tl-project-card img,.tl-media-thumb{height:230px}.tl-lightbox{padding:14px}}
+
+    </style>
+</head>
+<body>
+
+    <!-- Header / Navbar -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="#hero" class="logo-wrapper">
+                <img src="assets/logo.png" alt="TOPLAYER Logo" class="logo-img">
+                <div>
+                    <span class="logo-text">TOPLAYER</span>
+                    <span class="logo-sub">للمقاولات والاستثمار</span>
+                  
+                </div>
+            </a>
+            <nav class="nav-links">
+                <a href="#hero" data-i18n="nav_home">الرئيسية</a>
+                <a href="#about" data-i18n="nav_about">من نحن</a>
+                <a href="#services" data-i18n="nav_services">خدماتنا</a>
+                <a href="#values" data-i18n="nav_values">قيمناو نقاط قوتنا</a>
+                <a href="#projects" data-i18n="nav_projects">مشاريعنا</a>
+                <a href="#project-media" data-i18n="nav_media">معرض الوسائط</a>
+                <a href="#certificates" data-i18n="certificates_title">
+    الشهادات والاعتمادات
+</a>
+                <a href="#quality" data-i18n="nav_quality">سياسة الجودة</a>
+                <a href="#partners" data-i18n="nav_partners">شركاؤنا</a>
+               
+                <a href="#location" data-i18n="nav_location">موقعنا</a>
+                <a href="#contact" data-i18n="nav_contact">اتصل بنا</a>
+            </nav>
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn-lang">English</button>
+                
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content">
+            <h1 data-i18n="hero_title">شركة توبلاير للمقاولات - تجربة تنفيذ بمستوى VIP</h1>
+            <p data-i18n="hero_subtitle">نعمل وفق معايير النخبة في قطاع الإنشاءات وترتكز أعمالنا على الدقة، الفخامة، والالتزام المطلق بالتفاصيل.</p>
+            <div class="hero-btns">
+                <a href="#services" class="btn-gold" data-i18n="hero_btn_services">تصفح خدماتنا</a>
+                <a href="https://wa.me/966598098920" target="_blank" class="btn-outline" data-i18n="hero_btn_contact">تواصل معنا مباشرة</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="about_title">من نحن</h2>
+            <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200" alt="حول شركة توبلاير" class="about-banner">
+            <div class="about-grid">
+                <div class="card glass-card">
+                    <i class="fa-solid fa-building-user card-icon"></i>
+                    <h3 data-i18n="about_card1_title">عن توبلاير</h3>
+                    <p data-i18n="about_card1_desc">كيان وطني يعمل وفق معايير النخبة في قطاع الإنشاءات، ونقدم تجربة تنفيذ بمستوى VIP ترتكز على الدقة، الفخامة، والالتزام المطلق بالتفاصيل.</p>
+                </div>
+                <div class="card glass-card">
+                    <i class="fa-solid fa-eye card-icon"></i>
+                    <h3 data-i18n="about_card2_title">رؤيتنا</h3>
+                    <p data-i18n="about_card2_desc">أن نكون من الشركات الرائدة في قطاع المقاولات، من خلال تقديم مشاريع عالية الجودة، وفق أعلى معايير السلامة والاحترافية.</p>
+                </div>
+                <div class="card glass-card">
+                    <i class="fa-solid fa-bullseye card-icon"></i>
+                    <h3 data-i18n="about_card3_title">رسالتنا</h3>
+                    <p data-i18n="about_card3_desc">تقديم خدمات مقاولات وإنشاءات متكاملة وفق أعلى معايير الجودة والسلامة، من خلال كوادر مؤهلة وحلول مبتكرة والالتزام بالمواعيد.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+     <section id="values" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="values_title">قيمنا</h2>
+            <div class="values-grid">
+                <div class="value-item"><i class="fa-solid fa-check-double"></i><span data-i18n="val_1">الجودة والإتقان</span></div>
+                <div class="value-item"><i class="fa-solid fa-shield-halved"></i><span data-i18n="val_2">الأمن والسلامة</span></div>
+                <div class="value-item"><i class="fa-solid fa-scale-balanced"></i><span data-i18n="val_3">النزاهة والشفافية</span></div>
+                <div class="value-item"><i class="fa-solid fa-clock"></i><span data-i18n="val_4">الالتزام بالمواعيد</span></div>
+                <div class="value-item"><i class="fa-solid fa-user-tie"></i><span data-i18n="val_5">الاحترافية </span></div>
+                <div class="value-item"><i class="fa-solid fa-lightbulb"></i><span data-i18n="val_6">الابتكار والتطوير</span></div>
+               
+            </div>
+        </div>
+     </section>
+    <!-- Services Section -->
+    <section id="services" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-i18n="services_title">خدماتنا</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=600" alt="المشاريع التجارية" class="service-img">
+                    <div class="service-body">
+                        <i class="fa-solid fa-city"></i>
+                        <h3 data-i18n="srv_1">المشاريع التجارية عالية الجودة</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=600" alt="التشطيبات الراقية" class="service-img">
+                    <div class="service-body">
+                        <i class="fa-solid fa-crown"></i>
+                        <h3 data-i18n="srv_2">التشطيبات الراقية (VIP)</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="assets/project-3.jpg" alt="السفلتة والرصف" class="service-img">
+                    <div class="service-body">
+                        <i class="fa-solid fa-road"></i>
+                        <h3 data-i18n="srv_3">السفلتة والرصف المتقدم</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?q=80&w=600" alt="التصميم الداخلي" class="service-img">
+                    <div class="service-body">
+                        <i class="fa-solid fa-couch"></i>
+                        <h3 data-i18n="srv_4">التصميم الداخلي والديكور</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=600" alt="إدارة المشاريع" class="service-img">
+                    <div class="service-body">
+                        <i class="fa-solid fa-diagram-project"></i>
+                        <h3 data-i18n="srv_5">إدارة المشاريع</h3>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=600" alt="الإشراف الهندسي" class="service-img">
+                    <div class="service-body">
+                        <i class="fa-solid fa-user-gear"></i>
+                        <h3 data-i18n="srv_6">الإشراف الهندسي</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <!-- Projects -->
+    <section id="projects" class="section bg-light">
+        <div class="container">
+            <h2 class="section-title" data-i18n="projects_title">مشاريعنا</h2>
+
+<div style="text-align:center; margin: 15px auto 30px;">
+    <div style="text-align:center; margin:15px auto 30px;">
+    <p
+        data-ar="*مواقف فندق ليسن فالي"
+        data-en="*Lisen Valley Hotel Parking"
+        style="color:#070707; font-size:18px; margin:0;">
+        *مواقف فندق ليسن فالي
+    </p>
+</div>
+</div>
+
+            
+            <h3 style="text-align: center;max-width: 800px;margin: -20px auto 35px;color:var(--text-dark)" data-i18n="projects_intro">نماذج من أعمالنا ومشاريعنا في قطاع المقاولات والإنشاءات.</h3>
+            <div class="tl-projects-grid">
+                <article class="tl-project-card"><img src="assets/images/project-01.jpg" alt="TOPLAYER project 1" loading="lazy"><div class="tl-card-body"><h3 data-i18n="project_1_title">مشروع إنشائي</h3><p data-i18n="project_1_desc">تنفيذ وفق معايير الجودة والسلامة.</p></div></article>
+                <article class="tl-project-card"><img src="assets/images/project-02.jpg" alt="TOPLAYER project 2" loading="lazy"><div class="tl-card-body"><h3 data-i18n="project_2_title">أعمال تشطيب</h3><p data-i18n="project_2_desc">عناية بالتفاصيل وجودة التنفيذ.</p></div></article>
+                <article class="tl-project-card"><img src="assets/images/project-03.jpg" alt="TOPLAYER project 3" loading="lazy"><div class="tl-card-body"><h3 data-i18n="project_3_title">أعمال بنية تحتية</h3><p data-i18n="project_3_desc">حلول عملية للمشاريع الهندسية.</p></div></article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Combined photos and videos gallery -->
+    <section id="project-media" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="media_title">معرض الصور والفيديوهات</h2>
+            <p style="text-align:center;max-width:800px;margin:-20px auto 35px;color:var(--text-muted)" data-i18n="media_intro">استعرض مجموعة من الصور ومقاطع الفيديو الخاصة بالمشاريع.</p>
+            <div class="tl-media-filters" role="group" aria-label="Media filters">
+                <button type="button" class="tl-filter-btn active" data-filter="all" data-i18n="filter_all">الكل</button>
+                <button type="button" class="tl-filter-btn" data-filter="image" data-i18n="filter_images">الصور</button>
+                <button type="button" class="tl-filter-btn" data-filter="video" data-i18n="filter_videos">الفيديوهات</button>
+            </div>
+            <div class="tl-media-grid">
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 1" data-caption-en="TOPLAYER project photo 1"><button type="button" class="tl-media-open" data-media-src="assets/images/project-01.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-01.jpg" alt="صورة مشروع 1" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 1" data-en="Project photo 1">صورة مشروع 1</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 2" data-caption-en="TOPLAYER project photo 2"><button type="button" class="tl-media-open" data-media-src="assets/images/project-02.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-02.jpg" alt="صورة مشروع 2" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 2" data-en="Project photo 2">صورة مشروع 2</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 3" data-caption-en="TOPLAYER project photo 3"><button type="button" class="tl-media-open" data-media-src="assets/images/project-03.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-03.jpg" alt="صورة مشروع 3" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 3" data-en="Project photo 3">صورة مشروع 3</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 4" data-caption-en="TOPLAYER project photo 4"><button type="button" class="tl-media-open" data-media-src="assets/images/project-04.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-04.jpg" alt="صورة مشروع 4" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 4" data-en="Project photo 4">صورة مشروع 4</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 5" data-caption-en="TOPLAYER project photo 5"><button type="button" class="tl-media-open" data-media-src="assets/images/project-05.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-05.jpg" alt="صورة مشروع 5" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 5" data-en="Project photo 5">صورة مشروع 5</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 6" data-caption-en="TOPLAYER project photo 6"><button type="button" class="tl-media-open" data-media-src="assets/images/project-06.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-06.jpg" alt="صورة مشروع 6" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 6" data-en="Project photo 6">صورة مشروع 6</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 7" data-caption-en="TOPLAYER project photo 7"><button type="button" class="tl-media-open" data-media-src="assets/images/project-07.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-07.jpg" alt="صورة مشروع 7" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 7" data-en="Project photo 7">صورة مشروع 7</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 8" data-caption-en="TOPLAYER project photo 8"><button type="button" class="tl-media-open" data-media-src="assets/images/project-08.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-08.jpg" alt="صورة مشروع 8" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 8" data-en="Project photo 8">صورة مشروع 8</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 9" data-caption-en="TOPLAYER project photo 9"><button type="button" class="tl-media-open" data-media-src="assets/images/project-09.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-09.jpg" alt="صورة مشروع 9" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 9" data-en="Project photo 9">صورة مشروع 9</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 10" data-caption-en="TOPLAYER project photo 10"><button type="button" class="tl-media-open" data-media-src="assets/images/project-10.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-10.jpg" alt="صورة مشروع 10" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 10" data-en="Project photo 10">صورة مشروع 10</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 11" data-caption-en="TOPLAYER project photo 11"><button type="button" class="tl-media-open" data-media-src="assets/images/project-11.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-11.jpg" alt="صورة مشروع 11" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 11" data-en="Project photo 11">صورة مشروع 11</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 12" data-caption-en="TOPLAYER project photo 12"><button type="button" class="tl-media-open" data-media-src="assets/images/project-12.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-12.jpg" alt="صورة مشروع 12" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 12" data-en="Project photo 12">صورة مشروع 12</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 13" data-caption-en="TOPLAYER project photo 13"><button type="button" class="tl-media-open" data-media-src="assets/images/project-13.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-13.jpg" alt="صورة مشروع 13" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 13" data-en="Project photo 13">صورة مشروع 13</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 14" data-caption-en="TOPLAYER project photo 14"><button type="button" class="tl-media-open" data-media-src="assets/images/project-14.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-14.jpg" alt="صورة مشروع 14" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 14" data-en="Project photo 14">صورة مشروع 14</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 15" data-caption-en="TOPLAYER project photo 15"><button type="button" class="tl-media-open" data-media-src="assets/images/project-15.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-15.jpg" alt="صورة مشروع 15" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 15" data-en="Project photo 15">صورة مشروع 15</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 16" data-caption-en="TOPLAYER project photo 16"><button type="button" class="tl-media-open" data-media-src="assets/images/project-16.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-16.jpg" alt="صورة مشروع 16" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 16" data-en="Project photo 16">صورة مشروع 16</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 17" data-caption-en="TOPLAYER project photo 17"><button type="button" class="tl-media-open" data-media-src="assets/images/project-17.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-17.jpg" alt="صورة مشروع 17" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 17" data-en="Project photo 17">صورة مشروع 17</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 18" data-caption-en="TOPLAYER project photo 18"><button type="button" class="tl-media-open" data-media-src="assets/images/project-18.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-18.jpg" alt="صورة مشروع 18" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 18" data-en="Project photo 18">صورة مشروع 18</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 19" data-caption-en="TOPLAYER project photo 19"><button type="button" class="tl-media-open" data-media-src="assets/images/project-19.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-19.jpg" alt="صورة مشروع 19" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 19" data-en="Project photo 19">صورة مشروع 19</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 20" data-caption-en="TOPLAYER project photo 20"><button type="button" class="tl-media-open" data-media-src="assets/images/project-20.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-20.jpg" alt="صورة مشروع 20" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 20" data-en="Project photo 20">صورة مشروع 20</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 21" data-caption-en="TOPLAYER project photo 21"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/project-21.jpg" alt="صورة مشروع 21" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 21" data-en="Project photo 21">صورة مشروع 21</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 22" data-caption-en="TOPLAYER project photo 22"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/1.jpg" alt="صورة مشروع 22" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 22" data-en="Project photo 1">صورة مشروع 22</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 23" data-caption-en="TOPLAYER project photo 23"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/2.jpg" alt="صورة مشروع 23" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 23" data-en="Project photo 2">صورة مشروع 23</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 24" data-caption-en="TOPLAYER project photo 24"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/3.jpg" alt="صورة مشروع 24" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 24" data-en="Project photo 2">صورة مشروع 24</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 25" data-caption-en="TOPLAYER project photo 25"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/4.jpg" alt="صورة مشروع 25" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 25" data-en="Project photo 2">صورة مشروع 25</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 26" data-caption-en="TOPLAYER project photo 26"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/5.jpg" alt="صورة مشروع 26" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 26" data-en="Project photo 2">صورة مشروع 26</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 27" data-caption-en="TOPLAYER project photo 27"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/6.jpg" alt="صورة مشروع 27" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 27" data-en="Project photo 2">صورة مشروع 27</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 28" data-caption-en="TOPLAYER project photo 28"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/7.jpg" alt="صورة مشروع 28" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 28" data-en="Project photo 2">صورة مشروع 28</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 29" data-caption-en="TOPLAYER project photo 29"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/8.jpg" alt="صورة مشروع 29" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 29" data-en="Project photo 2">صورة مشروع 29</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 30" data-caption-en="TOPLAYER project photo 30"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/9.jpg" alt="صورة مشروع 30" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 30" data-en="Project photo 2">صورة مشروع 30</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 31" data-caption-en="TOPLAYER project photo 31"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/10.jpg" alt="صورة مشروع 31" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 31" data-en="Project photo 2">صورة مشروع 31</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 32" data-caption-en="TOPLAYER project photo 32"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/11.jpg" alt="صورة مشروع 32" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 32" data-en="Project photo 2">صورة مشروع 32</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 33" data-caption-en="TOPLAYER project photo 33"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/12.jpg" alt="صورة مشروع 33" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 33" data-en="Project photo 2">صورة مشروع 33</h3></div></button></article>
+                <article class="tl-media-card" data-type="image" data-caption-ar="صورة من مشاريع توبلاير 34" data-caption-en="TOPLAYER project photo 34"><button type="button" class="tl-media-open" data-media-src="assets/images/project-21.jpg" data-media-type="image" aria-label="View project photo"><img class="tl-media-thumb" src="assets/images/13.jpg" alt="صورة مشروع 34" loading="lazy"><span class="tl-media-icon"><i class="fa-solid fa-magnifying-glass-plus"></i></span><div class="tl-card-body"><h3 data-ar="صورة مشروع 34" data-en="Project photo 2">صورة مشروع 34</h3></div></button></article>
+
+<!-- صورة مشروع جديدة 35 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 35"
+         data-caption-en="TOPLAYER Project Photo 35">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/14.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 35"
+                data-en="Project Photo 35">
+                صورة مشروع 35
+            </h3>
+        </div>
+
+    </button>
+</article>
+
+<!-- صورة مشروع جديدة 36 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 36"
+         data-caption-en="TOPLAYER Project Photo 35">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/15.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 36"
+                data-en="Project Photo 35">
+                صورة مشروع 36
+            </h3>
+        </div>
+
+    </button>
+</article>
+
+<!-- صورة مشروع جديدة 37 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 37"
+         data-caption-en="TOPLAYER Project Photo 35">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/16.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 37"
+                data-en="Project Photo 35">
+                صورة مشروع 37
+            </h3>
+        </div>
+
+    </button>
+</article>
+
+<!-- صورة مشروع جديدة 38 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 38"
+         data-caption-en="TOPLAYER Project Photo 36">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/21.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/17.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 38"
+                data-en="Project Photo 35">
+                صورة مشروع 38
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 39 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 39"
+         data-caption-en="TOPLAYER Project Photo 39">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/18.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 39"
+                data-en="Project Photo 39">
+                صورة مشروع 39
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 40 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 40"
+         data-caption-en="TOPLAYER Project Photo 40">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/19.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 40"
+                data-en="Project Photo 40">
+                صورة مشروع 40
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 41 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 41"
+         data-caption-en="TOPLAYER Project Photo 41">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/20.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 41"
+                data-en="Project Photo 41">
+                صورة مشروع 41
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 42 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 42"
+         data-caption-en="TOPLAYER Project Photo 42">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/21.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 42"
+                data-en="Project Photo 42">
+                صورة مشروع 42
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 43 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 43"
+         data-caption-en="TOPLAYER Project Photo 43">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/22.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 43"
+                data-en="Project Photo 35">
+                صورة مشروع 43
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 44 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 44"
+         data-caption-en="TOPLAYER Project Photo 44">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/23.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 44"
+                data-en="Project Photo 44">
+                صورة مشروع 44
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 45 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 45"
+         data-caption-en="TOPLAYER Project Photo 45">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/24.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 45"
+                data-en="Project Photo 45">
+                صورة مشروع 45
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 46 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 46"
+         data-caption-en="TOPLAYER Project Photo 46">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/25.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 46"
+                data-en="Project Photo 46">
+                صورة مشروع 46
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 47 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 47"
+         data-caption-en="TOPLAYER Project Photo 47">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/26.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 47"
+                data-en="Project Photo 47">
+                صورة مشروع 47
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 48 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 48"
+         data-caption-en="TOPLAYER Project Photo 48">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/27.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 48"
+                data-en="Project Photo 48">
+                صورة مشروع 48
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 49 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 49"
+         data-caption-en="TOPLAYER Project Photo 49">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/28.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 49"
+                data-en="Project Photo 49">
+                صورة مشروع 49
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 50 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 50"
+         data-caption-en="TOPLAYER Project Photo 50">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/29.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 50"
+                data-en="Project Photo 50">
+                صورة مشروع 50
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 51 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 51"
+         data-caption-en="TOPLAYER Project Photo 51">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/30.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 51"
+                data-en="Project Photo 51">
+                صورة مشروع 51
+            </h3>
+        </div>
+
+    </button>
+</article>
+<!-- صورة مشروع جديدة 52 -->
+<article class="tl-media-card"
+         data-type="image"
+         data-caption-ar="صورة من مشاريع توبلاير 52"
+         data-caption-en="TOPLAYER Project Photo 52">
+
+    <button type="button"
+            class="tl-media-open"
+            data-media-src="assets/images/اسم-الصورة.jpg"
+            data-media-type="image"
+            aria-label="View project photo">
+
+        <img class="tl-media-thumb"
+             src="assets/images/31.jpg"
+             alt="صورة من مشاريع توبلاير"
+             loading="lazy">
+
+        <span class="tl-media-icon">
+            <i class="fa-solid fa-magnifying-glass-plus"></i>
+        </span>
+
+        <div class="tl-card-body">
+            <h3 data-ar="صورة مشروع 52"
+                data-en="Project Photo 52">
+                صورة مشروع 52
+            </h3>
+        </div>
+
+    </button>
+</article>
+
+                <article class="tl-media-card" data-type="video" data-caption-ar="فيديو من مشاريع توبلاير 1" data-caption-en="TOPLAYER project video 1"><button type="button" class="tl-media-open" data-media-src="assets/videos/project-video-02.mp4" data-media-type="video" aria-label="Play project video"><div class="tl-cert-preview"><div class="tl-cert-placeholder"><i class="fa-solid fa-circle-play"></i><span data-ar="تشغيل فيديو المشروع 1" data-en="Play project video 1">تشغيل فيديو المشروع 1</span></div></div><span class="tl-media-icon"><i class="fa-solid fa-play"></i></span><div class="tl-card-body"><h3 data-ar="فيديو مشروع 1" data-en="Project video 1">فيديو مشروع 1</h3></div></button></article>
+                <article class="tl-media-card" data-type="video" data-caption-ar="فيديو من مشاريع توبلاير 2" data-caption-en="TOPLAYER project video 2"><button type="button" class="tl-media-open" data-media-src="assets/videos/project-video-04.mp4" data-media-type="video" aria-label="Play project video"><div class="tl-cert-preview"><div class="tl-cert-placeholder"><i class="fa-solid fa-circle-play"></i><span data-ar="تشغيل فيديو المشروع 2" data-en="Play project video 2">تشغيل فيديو المشروع 2</span></div></div><span class="tl-media-icon"><i class="fa-solid fa-play"></i></span><div class="tl-card-body"><h3 data-ar="فيديو مشروع 2" data-en="Project video 2">فيديو مشروع 2</h3></div></button></article>
+
+            </div>
+        </div>
+    </section>
+
+   
+<!-- Certificates & Accreditations -->
+<section id="certificates" class="section bg-light">
+    <div class="container">
+
+        <h2 class="section-title" data-i18n="certificates_title">
+            الشهادات والاعتمادات
+        </h2>
+
+        <p class="tl-cert-intro" data-i18n="certificates_intro">
+            مؤهلات واعتمادات تعكس خبرتنا في تنفيذ أنظمة الأرضيات والإصلاح.
+        </p>
+
+        <div class="tl-cert-grid">
+
+            <!-- Certificate 1 -->
+            <article class="tl-cert-card">
+                <div class="tl-cert-preview">
+                    <iframe
+                        src="assets/PDF/TOPLAYER - CERTIFICATION.pdf"
+                        title="Certificate of Qualification"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="tl-card-body">
+                    <span class="tl-cert-label">
+                        <i class="fa-solid fa-award"></i>
+                        <span data-i18n="cert_label">شهادة تأهيل</span>
+                    </span>
+
+                    <p data-ar="اعتماد لتطبيق أنظمة الأرضيات والإصلاح في المملكة العربية السعودية."
+                       data-en="Qualification for flooring and repair systems application in Saudi Arabia.">
+                        اعتماد لتطبيق أنظمة الأرضيات والإصلاح في المملكة العربية السعودية.
+                    </p>
+
+                    
+                   <div class="tl-cert-dates">
+
+                    <a class="btn-gold tl-cert-button"
+                       href="assets/PDF/TOPLAYER - CERTIFICATION.pdf"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span data-i18n="open_pdf">عرض الشهادة</span>
+                    </a>
+                   </div>   
+                </div>
+            </article>
+
+            <!-- Certificate 2 -->
+            <article class="tl-cert-card">
+                <div class="tl-cert-preview">
+                    <iframe
+                        src="assets/PDF/26-08-19 TopLayer Company - Epoxy Flooring.pdf"
+                        title="Approved Applicator Certificate"
+                        loading="lazy">
+                    </iframe>
+                </div>
+
+                <div class="tl-card-body">
+                    <span class="tl-cert-label">
+                        <i class="fa-solid fa-certificate"></i>
+                        <span data-i18n="cert_label_2">منفّذ معتمد</span>
+                    </span>
+
+                    <p data-ar="اعتماد لتطبيق أنظمة أرضيات الإيبوكسي من Pleko."
+                       data-en="Approval to apply Pleko epoxy flooring systems.">
+                         شهادة منفّذ معتمد لأنظمة أرضيات الإيبوكسي من Pleko.
+                    </p>
+
+
+                      <div class="tl-cert-dates">
+
+                    <a class="btn-gold tl-cert-button"
+                       href="assets/PDF/26-08-19 TopLayer Company - Epoxy Flooring.pdf"
+                       target="_blank"
+                       rel="noopener">
+                        <i class="fa-solid fa-file-pdf"></i>
+                        <span data-i18n="open_pdf">عرض الشهادة</span>
+                    </a>
+                </div>
+                </div>
+            </article>
+           
+<!-- Certificate 3: National Address -->
+<article class="tl-cert-card">
+    <div class="tl-cert-preview">
+        <iframe
+            src="assets/PDF/العنوان الوطني .pdf"
+            title="National Address Proof"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="tl-card-body">
+        <span class="tl-cert-label">
+            <i class="fa-solid fa-certificate"></i>
+            <span data-ar="إثبات العنوان الوطني"
+      data-en="National Address Certificate">
+    إثبات العنوان الوطني
+</span>
+        </span>
+
+        <p
+            data-ar="وثيقة رسمية تثبت بيانات العنوان الوطني لشركة توبلاير في المملكة العربية السعودية."
+            data-en="Official proof of TOPLAYER Company's national address in Saudi Arabia.">
+            وثيقة رسمية تثبت بيانات العنوان الوطني لشركة توبلاير في المملكة العربية السعودية.
+        </p>
+
+        <div class="tl-cert-dates">
+
+        <a class="btn-gold tl-cert-button"
+           href="assets/PDF/العنوان الوطني .pdf"
+           target="_blank"
+           rel="noopener">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span data-ar="فتح ملف PDF"
+      data-en="Open PDF">فتح PDF</span>
+        </a>
+    </div>
+    </div>
+</article>
+
+
+<!-- Certificate 4: VAT Registration -->
+<article class="tl-cert-card">
+    <div class="tl-cert-preview">
+        <iframe
+            src="assets/PDF/ضريبة القيمة المضافة.pdf"
+            title="VAT Registration Certificate"
+            loading="lazy">
+        </iframe>
+    </div>
+
+    <div class="tl-card-body">
+        <span class="tl-cert-label">
+            <i class="fa-solid fa-award"></i>
+            <span
+                data-ar="شهادة التسجيل في ضريبة القيمة المضافة"
+                data-en="VAT Registration Certificate">
+                شهادة التسجيل في ضريبة القيمة المضافة
+            </span>
+        </span>
+
+        <p
+            data-ar="شهادة صادرة عن هيئة الزكاة والضريبة والجمارك تثبت تسجيل الشركة في ضريبة القيمة المضافة."
+            data-en="Certificate issued by the Zakat, Tax and Customs Authority confirming the company's VAT registration.">
+            شهادة صادرة عن هيئة الزكاة والضريبة والجمارك تثبت تسجيل الشركة في ضريبة القيمة المضافة.
+        </p>
+
+        <div class="tl-cert-dates">
+       
+
+        <a
+            class="btn-gold tl-cert-button"
+            href="assets/PDF/ضريبة القيمة المضافة.pdf"
+            target="_blank"
+            rel="noopener">
+            <i class="fa-solid fa-file-pdf"></i>
+            <span
+                data-ar="فتح PDF"
+                data-en="Open PDF">
+                فتح PDF
+            </span>
+        </a>
+    </div>
+</article>
+
+
+
+        </div>
+    </div>
+</section>
+
+
+    <!-- Quality Policy (ISO 9001) -->
+    <section id="quality" class="section bg-light">
+        <div class="container">
+            <div class="quality-box">
+                <i class="fa-solid fa-certificate quality-icon"></i>
+                <h2 data-i18n="quality_title">سياسة الجودة - ISO 9001</h2>
+                <p data-i18n="quality_desc">نعمل وفق نظام إدارة الجودة المعترف به دولياً (ISO 9001). نلتزم بالقضاء على جميع أشكال الهدر، وتوفير منتجات وخدمات عالية الجودة، وخلق ميزة تنافسية لصالح العميل والمشروع مع التحسين المستمر لعملياتنا.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Approved Partners -->
+    <section id="partners" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="partners_title">الشركات المعتمدة لدينا</h2>
+            <div class="partners-grid">
+                <div class="partner-card"><img src="assets/approved-1.jpg" alt="Sika Logo"></div>
+                <div class="partner-card"><img src="assets/approved-2.jpg" alt="Fosroc Logo"></div>
+                <div class="partner-card"><img src="assets/approved-3.jpg" alt="DCP Logo"></div>
+                <div class="partner-card"><img src="assets/approved-4.jpg" alt="Jotun Logo"></div>
+                <div class="partner-card"><img src="assets/approved-5.jpg" alt="BASF Logo"></div>
+                <div class="partner-card"><img src="assets/service-1.jpg" alt="Saveto Logo"></div>
+                <div class="partner-card"><img src="assets/7.png" alt=" Logo"></div>
+                <div class="partner-card"><img src="assets/8.png" alt="Saveto "></div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- Company Location / Google Maps -->
+    <section id="location" class="section bg-light location-section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="location_title">موقعنا</h2>
+            <p style="text-align:center;max-width:800px;margin:-20px auto 35px;color:var(--text-muted)" data-i18n="location_intro">يسعدنا زيارتكم في مقرنا بالمملكة العربية السعودية، الرياض.</p>
+            <div class="location-grid">
+                <div class="location-info">
+                    <h3 data-i18n="location_company">TOPLAYER للمقاولات والاستثمار</h3>
+                    <p><i class="fa-solid fa-location-dot"></i><span data-i18n="location_address"> المملكة العربية السعودية، الرياض، حي العقيق، شارع سعود بن فيصل الفرعي</span></p>
+                    <p><i class="fa-solid fa-map-location-dot"></i><span data-i18n="location_note">يمكنك فتح الخريطة لمعرفة الموقع والاتجاهات.</span></p>
+                    <a class="location-directions" href="https://maps.app.goo.gl/55rzVpNxnqumxaiQ8?g_st=aw" target="_blank" rel="noopener noreferrer"><i class="fa-solid fa-diamond-turn-right"></i><span data-i18n="location_directions">افتح الموقع في Google Maps</span></a>
+                </div>
+                <div class="location-map">
+                    <iframe title="TOPLAYER location on Google Maps" src="https://www.google.com/maps?q=24.7864332,46.6141383&z=17&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Footer -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title" data-i18n="contact_title">تواصل معنا</h2>
+           <div class="contact-info">
+    <p>
+        <i class="fa-solid fa-phone"></i>
+        <span data-ar="الهاتف:" data-en="Phone:">الهاتف:</span>
+        +966 592 155 521
+       
+    </p>
+
+     <p>
+        <i class="fa-solid fa-phone"></i>
+        
+        <span data-ar="الهاتف:" data-en="Phone:">الهاتف:</span>
+        +966 598 098 920
+    </p>
+
+
+    <p>
+        <i class="fa-solid fa-envelope"></i>
+        <span data-ar="البريد الإلكتروني:"
+              data-en="Email:">البريد الإلكتروني:</span>
+        Toplayerc@gmail.com
+    </p>
+
+    <p>
+        <i class="fa-solid fa-location-dot"></i>
+        <span data-ar="الموقع: المملكة العربية السعودية - الرياض"
+              data-en="Location: Riyadh, Saudi Arabia">
+            الموقع: المملكة العربية السعودية - الرياض
+        </span>
+    </p>
+</div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2026 TOPLAYER Contracting Company. All Rights Reserved.</p>
+        </div>
+    </footer>
+    <!-- نافذة عرض الصور والفيديوهات -->
+<div id="topMediaLightbox" class="tl-lightbox"
+     role="dialog" aria-modal="true">
+
+    <div class="tl-lightbox-inner">
+
+        <button type="button"
+                id="topMediaLightboxClose"
+                class="tl-lightbox-close"
+                aria-label="Close">
+            &times;
+        </button>
+
+        <div id="topMediaLightboxContent"></div>
+
+        <p id="topMediaLightboxCaption"
+           class="tl-lightbox-caption"></p>
+
+    </div>
+</div>
+
+    <!-- Floating WhatsApp Widget -->
+    <a href="https://wa.me/966592155521" class="whatsapp-float" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script>
+        const translations = {
+            ar: {
+                nav_home: "الرئيسية",
+                nav_about: "من نحن",
+                nav_services: "خدماتنا",
+                nav_values: "قيمنا ونقاط قوتنا",
+                nav_projects: "مشاريعنا",
+                nav_media: "معرض الوسائط",
+                certificates_title: "الشهادات والاعتمادات",
+                certificates_intro: "مؤهلات واعتمادات تعكس خبرتنا في تنفيذ أنظمة الأرضيات والإصلاح.",
+                cert_label: "شهادة تأهيل",
+                cert_label_2: "منفّذ معتمد",
+                cert_issued: "تاريخ الإصدار:",
+                cert_expiry: "تاريخ الانتهاء:",
+                cert_1_title: "شهادة التأهيل لأنظمة الأرضيات والإصلاح",
+                cert_1_desc: "تأهيل الشركة كمقاول/منفّذ لأنظمة الأرضيات والإصلاح في المملكة العربية السعودية.",
+                cert_2_title: "شهادة منفّذ معتمد لأنظمة أرضيات الإيبوكسي",
+                cert_2_desc: "شهادة صادرة عن Pleko Saudi Arabia لتطبيق أنظمة أرضيات الإيبوكسي المحددة في الشهادة.",
+                open_pdf: "عرض الشهادة",
+                nav_quality: "سياسة الجودة",
+                nav_partners: "شركاؤنا",
+                nav_credentials: "الوثائق الرسمية",
+                nav_location: "موقعنا",
+                location_title: "موقعنا",
+                location_intro: "يسعدنا زيارتكم في مقرنا بالمملكة العربية السعودية، الرياض.",
+                location_company: "TOPLAYER للمقاولات والاستثمار",
+                location_address: "المملكة العربية السعودية، الرياض، حي العقيق، شارع سعود بن فيصل الفرعي",
+                location_note: "يمكنك فتح الخريطة لمعرفة الموقع والاتجاهات.",
+                location_directions: "افتح الموقع في Google Maps",
+                nav_contact: "اتصل بنا",
+                nav_cta: "استشارة VIP",
+                projects_title: "مشاريعنا", projects_intro: "نماذج من أعمالنا ومشاريعنا في قطاع المقاولات والإنشاءات.",
+                project_1_title: "مشروع إنشائي", project_1_desc: "تنفيذ وفق معايير الجودة والسلامة.", project_2_title: "أعمال تشطيب", project_2_desc: "عناية بالتفاصيل وجودة التنفيذ.", project_3_title: "أعمال بنية تحتية", project_3_desc: "حلول عملية للمشاريع الهندسية.",
+                media_title: "معرض الصور والفيديوهات", media_intro: "استعرض مجموعة من الصور ومقاطع الفيديو الخاصة بالمشاريع.", filter_all: "الكل", filter_images: "الصور", filter_videos: "الفيديوهات",
+                certificates_title: "الشهادات والاعتمادات", certificates_intro: "يمكنك الاطلاع على الوثائق الرسمية من خلال فتح ملف PDF الخاص بكل وثيقة.", cert_placeholder_1: "معاينة الشهادة الأولى", cert_placeholder_2: "معاينة الشهادة الثانية", cert_placeholder_3: "معاينة الشهادة الثالثة", cert_1_title: "شهادة / اعتماد 1", cert_1_desc: "استبدلي هذا العنصر بصورة الشهادة وملف PDF الصحيح.", cert_2_title: "شهادة / اعتماد 2", cert_2_desc: "استبدلي هذا العنصر بصورة الشهادة وملف PDF الصحيح.", cert_3_title: "شهادة / اعتماد 3", cert_3_desc: "استبدلي هذا العنصر بصورة الشهادة وملف PDF الصحيح.", open_pdf: "فتح PDF",
+                hero_title: "شركة توبلاير للمقاولات - تجربة تنفيذ بمستوى VIP",
+                hero_subtitle: "نعمل وفق معايير النخبة في قطاع الإنشاءات وترتكز أعمالنا على الدقة، الفخامة، والالتزام المطلق بالتفاصيل.",
+                hero_btn_services: "تصفح خدماتنا",
+                hero_btn_contact: "تواصل معنا مباشرة",
+                about_title: "من نحن",
+                about_card1_title: "عن توبلاير",
+                about_card1_desc: "كيان وطني يعمل وفق معايير النخبة في قطاع الإنشاءات، ونقدم تجربة تنفيذ بمستوى VIP ترتكز على الدقة، الفخامة، والالتزام المطلق بالتفاصيل.",
+                about_card2_title: "رؤيتنا",
+                about_card2_desc: "أن نكون من الشركات الرائدة في قطاع المقاولات، من خلال تقديم مشاريع عالية الجودة، وفق أعلى معايير السلامة والاحترافية.",
+                about_card3_title: "رسالتنا",
+                about_card3_desc: "تقديم خدمات مقاولات وإنشاءات متكاملة وفق أعلى معايير الجودة والسلامة، من خلال كوادر مؤهلة وحلول مبتكرة والالتزام بالمواعيد.",
+                services_title: "خدماتنا",
+                srv_1: "المشاريع التجارية عالية الجودة",
+                srv_2: "التشطيبات الراقية (VIP)",
+                srv_3: "السفلتة والرصف المتقدم",
+                srv_4: "التصميم الداخلي والديكور",
+                srv_5: "إدارة المشاريع",
+                srv_6: "الإشراف الهندسي",
+                values_title: "قيمنا ونقاط قوتنا",
+                val_1: "الجودة والإتقان",
+                val_2: "الأمن والسلامة",
+                val_3: "النزاهة والشفافية",
+                val_4: "الالتزام بالمواعيد",
+                val_5: "الاحترافية عالية المستوى",
+                val_6: "الابتكار والتطوير",
+                quality_title: "سياسة الجودة - ISO 9001",
+                quality_desc: "نعمل وفق نظام إدارة الجودة المعترف به دولياً (ISO 9001). نلتزم بالقضاء على جميع أشكال الهدر، وتوفير منتجات وخدمات عالية الجودة، وخلق ميزة تنافسية لصالح العميل والمشروع مع التحسين المستمر لعملياتنا.",
+                partners_title: "الشركات المعتمدة لدينا",
+                cred_title: "الوثائق والاعتمادات الرسمية",
+                cred_1_title: "العنوان الوطني",
+                cred_1_desc: "المملكة العربية السعودية - الرياض - حي الحمراء - شارع أبي القاسم بن الطوسي (13217)",
+                cred_2_title: "الرقم الضريبي (VAT)",
+                cred_3_title: "السجل التجاري (CR)",
+                contact_title: "تواصل معنا",
+                send_btn: "إرسال الطلب"
+            },
+            en: {
+                nav_home: "Home",
+                nav_about: "About Us",
+                nav_services: "Services",
+                nav_values: "Values & Strengths",
+                nav_projects: "Projects",
+                nav_media: "Media Gallery",
+                certificates_title: "Certifications & Accreditations",
+                certificates_intro: "Qualifications and certifications reflecting our experience in flooring and repair systems.",
+                cert_label: "Qualification Certificate",
+                cert_label_2: "Approved Applicator",
+                cert_issued: "Issue date:",
+                cert_expiry: "Expiry date:",
+                cert_1_title: "Certificate of Qualification for Flooring & Repair Systems",
+                cert_1_desc: "Qualifies the company as a contractor/applicator for flooring and repair systems in Saudi Arabia.",
+                cert_2_title: "Approved Applicator Certificate for Epoxy Flooring",
+                cert_2_desc: "Issued by Pleko Saudi Arabia for the epoxy flooring systems specified in the certificate.",
+                open_pdf: "View Certificate",
+                nav_quality: "Quality Policy",
+                nav_partners: "Partners",
+                nav_credentials: "Credentials",
+                nav_location: "Our Location",
+                location_title: "Our Location",
+                location_intro: "We welcome you to visit our office in Riyadh, Saudi Arabia.",
+                location_company: "TOPLAYER Contracting & Investment",
+                location_address: "Al Aqiq District, Saud Bin Faisal Branch Road, Riyadh, Saudi Arabia.",
+                location_note: "Open the map to view our location and directions.",
+                location_directions: "Open in Google Maps",
+                nav_contact: "Contact",
+                nav_cta: "VIP Consultation",
+                projects_title: "Our Projects", projects_intro: "A selection of our work and projects in contracting and construction.",
+                project_1_title: "Construction Project", project_1_desc: "Execution guided by quality and safety standards.", project_2_title: "Finishing Works", project_2_desc: "Attention to detail and quality execution.", project_3_title: "Infrastructure Works", project_3_desc: "Practical solutions for engineering projects.",
+                media_title: "Photos & Videos Gallery", media_intro: "Explore photos and videos from our projects.", filter_all: "All", filter_images: "Photos", filter_videos: "Videos",
+                certificates_title: "Certificates & Accreditations", certificates_intro: "Open each document's PDF file to view the official document.", cert_placeholder_1: "Certificate preview 1", cert_placeholder_2: "Certificate preview 2", cert_placeholder_3: "Certificate preview 3", cert_1_title: "Certificate / Accreditation 1", cert_1_desc: "Replace this placeholder with the real certificate image and PDF.", cert_2_title: "Certificate / Accreditation 2", cert_2_desc: "Replace this placeholder with the real certificate image and PDF.", cert_3_title: "Certificate / Accreditation 3", cert_3_desc: "Replace this placeholder with the real certificate image and PDF.", open_pdf: "Open PDF",
+                hero_title: "TOPLAYER Contracting - VIP Execution Standards",
+                hero_subtitle: "Operating to elite standards in the construction sector, grounded in precision, luxury, and commitment to detail.",
+                hero_btn_services: "Explore Services",
+                hero_btn_contact: "Contact Directly",
+                about_title: "About Us",
+                about_card1_title: "About TOPLAYER",
+                about_card1_desc: "National entity operating to elite standards, delivering a VIP execution experience grounded in precision and luxury.",
+                about_card2_title: "Our Vision",
+                about_card2_desc: "To be a leading company in contracting by delivering high-quality, safe, and sustainable projects.",
+                about_card3_title: "Our Mission",
+                about_card3_desc: "Providing comprehensive construction services according to the highest standards of quality, safety, and timeliness.",
+                services_title: "Our Services",
+                srv_1: "High-End Commercial Projects",
+                srv_2: "Premium VIP Finishing",
+                srv_3: "Advanced Asphalting & Paving",
+                srv_4: "Interior Design & Luxury Décor",
+                srv_5: "Full Project Management",
+                srv_6: "Engineering Supervision",
+                values_title: "Our Values & Strengths",
+                val_1: "Quality & Excellence",
+                val_2: "Safety & Security",
+                val_3: "Integrity & Transparency",
+                val_4: "Strict Punctuality",
+                val_5: "High Professionalism",
+                val_6: "Innovation & Growth",
+                quality_title: "Quality Policy - ISO 9001",
+                quality_desc: "Operating under the ISO 9001 standard. We eliminate waste, deliver high-quality services, and continuously improve our operations.",
+                partners_title: "Approved Suppliers",
+                cred_title: "Official Credentials",
+                cred_1_title: "National Address",
+                cred_1_desc: "KSA - Riyadh - Al Hamra Dist. - Abi Al Qasim St (13217)",
+                cred_2_title: "VAT Registration",
+                cred_3_title: "Commercial Register (CR)",
+                contact_title: "Contact Us",
+                send_btn: "Send Request"
+            }
+        };
+
+        let currentLang = 'ar';
+        const langBtn = document.getElementById('lang-toggle');
+        function applyLanguage() {
+            document.documentElement.lang = currentLang;
+            document.documentElement.dir = currentLang === 'ar' ? 'rtl' : 'ltr';
+            if (langBtn) langBtn.textContent = currentLang === 'ar' ? 'English' : 'العربية';
+            document.querySelectorAll('[data-i18n]').forEach(element => {
+                const key = element.getAttribute('data-i18n');
+                const value = translations[currentLang] && translations[currentLang][key];
+                if (value) {
+                    // Keep icons and nested markup inside buttons/cards intact.
+                    if (element.children.length === 0) element.textContent = value;
+                    else {
+                        const icon = element.querySelector('i');
+                        element.textContent = value;
+                        if (icon) element.prepend(icon);
+                    }
+                }
+            });
+            document.querySelectorAll('[data-ar][data-en]').forEach(element => {
+                element.textContent = currentLang === 'ar' ? element.dataset.ar : element.dataset.en;
+            });
+            document.querySelectorAll('[data-media-src]').forEach(button => {
+                button.setAttribute('aria-label', currentLang === 'ar' ? (button.dataset.mediaType === 'video' ? 'تشغيل فيديو المشروع' : 'عرض صورة المشروع') : (button.dataset.mediaType === 'video' ? 'Play project video' : 'View project photo'));
+            });
+        }
+        if (langBtn) langBtn.addEventListener('click', () => { currentLang = currentLang === 'ar' ? 'en' : 'ar'; applyLanguage(); });
+
+        // Gallery filters
+        const filterButtons = document.querySelectorAll('.tl-filter-btn');
+        const mediaCards = document.querySelectorAll('.tl-media-card');
+        filterButtons.forEach(button => button.addEventListener('click', () => {
+            filterButtons.forEach(item => item.classList.toggle('active', item === button));
+            const filter = button.dataset.filter;
+            mediaCards.forEach(card => { card.hidden = filter !== 'all' && card.dataset.type !== filter; });
+        }));
+
+        // Image/video lightbox
+        const lightbox = document.getElementById('topMediaLightbox');
+        const lightboxContent = document.getElementById('topMediaLightboxContent');
+        const lightboxCaption = document.getElementById('topMediaLightboxCaption');
+        function closeMediaLightbox() {
+            if (!lightbox) return;
+            lightbox.classList.remove('open');
+            lightboxContent.innerHTML = '';
+            document.body.style.overflow = '';
+        }
+        document.querySelectorAll('.tl-media-open[data-media-src]').forEach(button => button.addEventListener('click', () => {
+            if (!lightbox || !lightboxContent || !lightboxCaption) return;
+            const src = button.dataset.mediaSrc;
+            const type = button.dataset.mediaType;
+            const card = button.closest('.tl-media-card');
+            const caption = card ? (currentLang === 'ar' ? card.dataset.captionAr : card.dataset.captionEn) : '';
+            lightboxContent.replaceChildren();
+            if (type === 'video') {
+                const video = document.createElement('video');
+                video.src = src;
+                video.controls = true;
+                video.autoplay = true;
+                video.playsInline = true;
+                video.preload = 'metadata';
+                video.setAttribute('aria-label', caption || 'Project video');
+                video.addEventListener('error', () => {
+                    const message = document.createElement('p');
+                    message.textContent = currentLang === 'ar'
+                        ? 'تعذر تحميل الفيديو. تأكدي من وجود الملف في المسار: ' + src
+                        : 'Could not load video. Check that this file exists: ' + src;
+                    message.style.color = '#fff';
+                    lightboxContent.replaceChildren(message);
+                }, { once: true });
+                lightboxContent.appendChild(video);
+                const playAttempt = video.play();
+                if (playAttempt && typeof playAttempt.catch === 'function') playAttempt.catch(() => {});
+            } else {
+                const image = document.createElement('img');
+                image.src = src;
+                image.alt = caption || 'Project image';
+                image.addEventListener('error', () => {
+                    image.alt = currentLang === 'ar' ? 'تعذر تحميل الصورة: ' + src : 'Could not load image: ' + src;
+                }, { once: true });
+                lightboxContent.appendChild(image);
+            }
+            lightboxCaption.textContent = caption || '';
+            lightbox.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }));
+        document.getElementById('topMediaLightboxClose')?.addEventListener('click', closeMediaLightbox);
+        lightbox?.addEventListener('click', event => { if (event.target === lightbox) closeMediaLightbox(); });
+        document.addEventListener('keydown', event => { if (event.key === 'Escape') closeMediaLightbox(); });
+        applyLanguage();
+    </script>
+</body>
+</html>
